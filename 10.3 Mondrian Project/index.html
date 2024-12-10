@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* Mondrian Colors */
+    :root {
+      --gap-color: #000;
+      --white: #F0F1EC;
+      --red: #E72F24;
+      --black: #232629;
+      --blue: #004592;
+      --yellow: #F9D01E;
+    }
+
+    /* General Styling */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: var(--white);
+    }
+
+    .container {
+      display: grid;
+      width: 748px;
+      height: 748px;
+      gap: 9px;
+      background-color: var(--gap-color);
+      grid-template-columns: 320px 198px 153px 50px;
+      grid-template-rows: 414px 130px 155px 22px;
+    }
+
+    .item {
+      background-color: var(--white);
+    }
+
+    .red {
+      background-color: var(--red);
+      grid-column: 1;
+      grid-row: 1 / span 2;
+    }
+
+    .white-large {
+      grid-column: 2 / span 3;
+      grid-row: 1;
+    }
+
+    .white-mid {
+      grid-column: 2 / span 2;
+      grid-row: 2 / span 2;
+    }
+
+    .white-small {
+      grid-column: 1;
+      grid-row: 3 / span 2;
+    }
+
+    .blue {
+      background-color: var(--blue);
+      grid-column: 4;
+      grid-row: 2 / span 2;
+    }
+
+    .yellow {
+      background-color: var(--yellow);
+      grid-column: 2;
+      grid-row: 4;
+    }
+
+    .black {
+      background-color: var(--black);
+      grid-column: 3;
+      grid-row: 4;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item red"></div>
+    <div class="item white-large"></div>
+    <div class="item white-mid"></div>
+    <div class="item white-small"></div>
+    <div class="item blue"></div>
+    <div class="item yellow"></div>
+    <div class="item black"></div>
+  </div>
+</body>
+
+</html>
